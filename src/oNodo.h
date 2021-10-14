@@ -3,6 +3,9 @@
 #define __NODO_H__
 
 struct Nodo {
+
+    double lon, lat;
+
     double x, y, z;
     long id_nodo;
 

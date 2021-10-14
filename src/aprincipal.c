@@ -73,9 +73,9 @@ void generaTR(void) {
 void generaRecorridos(void) {
 
     double delta0 = 0.0;
-    double delta1 = 0.0;
+    double delta1;
 
-    long tam = 1;
+    long iter = 1;
 
     printf("Genera los recorridos ...\n");
 
@@ -89,8 +89,8 @@ void generaRecorridos(void) {
             delta0 += (pNodo + i)->delta;
         }
 
-        printf("Ciclo: %li Marca recursos con nodo mas cercano: %lf\n", tam, delta1 - delta0);
-        tam++;
-    } while (delta1 != delta0 && tam <= ITER_REC);
+        printf("Ciclo: %li Marca recursos con nodo mas cercano: %lf\n", iter, delta1 - delta0);
+        iter++;
+    } while (delta1 != delta0 && iter <= ITER_REC);
 
 }

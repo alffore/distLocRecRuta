@@ -31,6 +31,7 @@ extern int cargaArchivoRec(char *snomarchivo, PRecurso prec);
 extern int cargaArchivoSeg(char *snomarchivo, PSegmento pseg);
 
 extern void imprimeSalida(char *sarchivosal);
+extern void imprimeSalidaNodo(char *sarchivo);
 
 
 /**
@@ -117,6 +118,8 @@ int main(void) {
     calculos();
 
     imprimeSalida("salida_loc.csv");
+
+    imprimeSalidaNodo("salida_nodos.csv");
 
     liberaHostMemoria();
 

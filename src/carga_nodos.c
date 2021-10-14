@@ -50,8 +50,12 @@ void parseaLineaNodo(char *slinea, PNodo pnodo) {
     lon = atof(result);
     result = strtok(NULL, SEP);
 
+    pnodo->lon=lon;
+
     lat = atof(result);
     result = strtok(NULL, SEP);
+
+    pnodo->lat=lat;
 
     pnodo->id_nodo = atoi(result);
 

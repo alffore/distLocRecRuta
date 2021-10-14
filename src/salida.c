@@ -10,6 +10,7 @@ extern size_t tam_loc;
 
 
 void imprimeSalida(char *sarchivosal);
+void imprimeSalidaNodo(char *sarchivo);
 
 /**
  *
@@ -27,6 +28,21 @@ void imprimeSalida(char *sarchivosal){
         fprintf(fh,"Loc: %li,%li,%lf\n",pl->id_loc,pn->id_rec,pn->dist_rec);
 
     }
+
+    fclose(fh);
+}
+
+
+void imprimeSalidaNodo(char *sarchivo){
+    FILE *fh;
+    fh= fopen(sarchivo,"w");
+
+    for(size_t i=0;i<tam_nodo;i++){
+        PNodo p =pNodo+i;
+
+        fprintf(fh,"%li,%lf,%lf,%li,%lf\n",p->id_nodo,p->lon,p->lat,p->id_rec,p->dist_rec);
+    }
+
 
     fclose(fh);
 }
